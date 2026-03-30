@@ -5,6 +5,7 @@ import LearningGoals from "@/components/LearningGoals";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <FAQ />
+      <RegisterSection />
       <Footer />
     </main>
   );
