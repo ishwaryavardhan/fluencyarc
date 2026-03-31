@@ -21,19 +21,19 @@ const Services = () => {
     };
 
     return (
-        <section id="pricing" className="py-24 bg-white overflow-hidden">
+        <section id="pricing" className="py-8 bg-white overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
                     {/* Left Side: Creative Masterclass Details */}
                     <div className="space-y-8 max-w-xl animate-fade-in pb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full text-primary font-bold text-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#013d45]/5 rounded-full text-[#013d45] font-bold text-sm">
                             90-Minute Immersive Session
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black leading-tight text-foreground">
-                            Your 90-Minute <span className="text-primary italic">Fluency Breakthrough</span>
+                            Your 90-Minute <span className="text-[#013d45] italic">Fluency Breakthrough</span>
                         </h2>
                         <p className="text-xl text-text-secondary leading-relaxed font-medium">
-                            Turn hesitation into high-impact. Discover how to stop translating in your head and start commanding any conversation for just ₹99.
+                            Turn hesitation into high-impact. Discover how to stop translating in your head and start commanding any conversation for just .
                         </p>
 
                         <div className="space-y-6 pt-4">
@@ -60,7 +60,7 @@ const Services = () => {
                                 }
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-4 group">
-                                    <div className="w-6 h-6 mt-1 bg-primary/10 text-primary rounded-full flex items-center justify-center text-[10px] font-black group-hover:bg-primary group-hover:text-white transition-colors">✓</div>
+                                    <div className={`w-6 h-6 mt-1 ${i % 2 === 0 ? 'bg-[#013d45]/10 text-[#013d45]' : 'bg-[#ebb207]/10 text-[#ebb207]'} rounded-full flex items-center justify-center text-[10px] font-black group-hover:${i % 2 === 0 ? 'bg-[#013d45]' : 'bg-[#ebb207]'} group-hover:text-white transition-colors`}>✓</div>
                                     <div className="space-y-1">
                                         <p className="font-black text-foreground/90 leading-none">{item.title}</p>
                                         <p className="text-sm text-text-secondary font-medium">{item.desc}</p>
@@ -72,11 +72,11 @@ const Services = () => {
 
                     {/* Right Side: Lead Gen Form (Sticky) */}
                     <div className="relative lg:sticky lg:top-28 animate-fade-in delay-200">
-                        <div className="absolute inset-0 bg-purple-gradient opacity-10 blur-[80px] -z-10 rotate-12"></div>
-                        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-primary/10 border border-primary/5">
+                        <div className="absolute inset-0 bg-[#013d45] opacity-10 blur-[80px] -z-10 rotate-12"></div>
+                        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-[#013d45]/10 border border-[#013d45]/5">
                             <div className="mb-8 text-center sm:text-left">
                                 <h3 className="text-3xl font-black text-foreground mb-2">Claim Your Slot</h3>
-                                <p className="text-text-secondary font-medium">Experience the breakthrough for just ₹99.</p>
+                                <p className="text-text-secondary font-medium">Experience the breakthrough for just .</p>
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
@@ -89,7 +89,7 @@ const Services = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         placeholder="Enter your name"
-                                        className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all outline-none font-medium"
+                                        className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-[#013d45] focus:ring-4 focus:ring-[#013d45]/5 transition-all outline-none font-medium"
                                     />
                                 </div>
 
@@ -103,7 +103,7 @@ const Services = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="email@example.com"
-                                            className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all outline-none font-medium"
+                                            className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-[#013d45] focus:ring-4 focus:ring-[#013d45]/5 transition-all outline-none font-medium"
                                         />
                                     </div>
                                     <div>
@@ -115,7 +115,7 @@ const Services = () => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="+91 00000 00000"
-                                            className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all outline-none font-medium"
+                                            className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-[#013d45] focus:ring-4 focus:ring-[#013d45]/5 transition-all outline-none font-medium"
                                         />
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ const Services = () => {
                                         name="level"
                                         value={formData.level}
                                         onChange={handleChange}
-                                        className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all outline-none font-medium appearance-none cursor-pointer"
+                                        className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-[#013d45] focus:ring-4 focus:ring-[#013d45]/5 transition-all outline-none font-medium appearance-none cursor-pointer"
                                     >
                                         <option>Beginner</option>
                                         <option>Intermediate</option>
@@ -137,9 +137,9 @@ const Services = () => {
                                 <div className="pt-2">
                                     <button
                                         type="submit"
-                                        className="w-full bg-purple-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all active:scale-[0.98]"
+                                        className="w-full bg-[#ebb207] text-black py-5 rounded-2xl font-black text-lg shadow-xl shadow-[#ebb207]/20 hover:shadow-[#ebb207]/30 transition-all active:scale-[0.98]"
                                     >
-                                        Get My Breakthrough — ₹99
+                                        Get My Breakthrough — 
                                     </button>
                                 </div>
 

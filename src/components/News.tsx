@@ -25,7 +25,7 @@ const news = [
 
 const News = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-8 bg-white overflow-hidden">
             <div className="container mx-auto px-6 text-center">
                 <h2 className="text-4xl md:text-6xl font-black mb-6">Latest on News</h2>
                 <p className="text-xl text-text-secondary font-medium mb-20">Discover stories, updates and academic tips from FluencyArc.</p>
@@ -37,8 +37,8 @@ const News = () => {
                                 {item.img}
                             </div>
                             <div className="space-y-3 px-2">
-                                <span className="text-primary font-black text-xs uppercase tracking-widest">{item.tag}</span>
-                                <h4 className="text-2xl font-black text-foreground group-hover:text-primary transition-colors cursor-pointer leading-tight">
+                                <span className="text-[#013d45] font-black text-xs uppercase tracking-widest">{item.tag}</span>
+                                <h4 className="text-2xl font-black text-foreground group-hover:text-[#013d45] transition-colors cursor-pointer leading-tight">
                                     {item.title}
                                 </h4>
                             </div>

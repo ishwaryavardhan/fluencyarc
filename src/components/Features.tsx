@@ -44,7 +44,7 @@ const features = [
 
 const Features = () => {
     return (
-        <section id="why-us" className="py-24 md:py-32 bg-surface">
+        <section id="why-us" className="py-8 md:py-32 bg-surface">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-black">Why Choose FluencyArc?</h2>
@@ -59,7 +59,7 @@ const Features = () => {
                             key={index}
                             className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
+                            <div className={`w-16 h-16 ${index % 2 === 0 ? 'bg-[#013d45]/10 text-[#013d45]' : 'bg-[#ebb207]/10 text-[#ebb207]'} rounded-2xl flex items-center justify-center mb-6`}>
                                 {feature.icon}
                             </div>
                             <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
