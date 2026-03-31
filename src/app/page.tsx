@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TutorProfile from "@/components/TutorProfile";
+import WebShorties from "@/components/WebStories";
 import LearningGoals from "@/components/LearningGoals";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TutorProfile />
+      <WebShorties />
       <LearningGoals />
       <Services />
       <Testimonials />
@@ -23,3 +25,4 @@ export default function Home() {
     </main>
   );
 }
+

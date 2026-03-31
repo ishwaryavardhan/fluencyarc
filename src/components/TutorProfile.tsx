@@ -1,21 +1,28 @@
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 
 const TutorProfile = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const togglePlay = () => {
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+            } else {
+                videoRef.current.muted = false;
+                videoRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
+
     return (
-        <section className="py-8 bg-white overflow-hidden relative">
+        <section className="py-8 bg-white overflow-hidden relative group">
             <div className="absolute inset-0 z-0">
-                <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                >
-                    <source src="https://res.cloudinary.com/dabyqx1mz/video/upload/v1774723033/WhatsApp_Video_2026-03-28_at_10.47.24_zonqgq.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-[#013d45]/80"></div>
+                
+                <div className={`absolute inset-0 transition-opacity duration-700 ${isPlaying ? 'bg-[#013d45]/40' : 'bg-[#013d45]/80'}`}></div>
             </div>
             <div className="container mx-auto px-6 relative z-10">
                 <div className="bg-[#013d45]/90 backdrop-blur-md rounded-[3rem] p-10 md:p-16 text-white relative flex flex-col md:flex-row items-center gap-16 overflow-hidden">
@@ -23,21 +30,36 @@ const TutorProfile = () => {
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
                     <div className="relative z-10 w-full md:w-1/3">
-                        <div className="aspect-[4/5] bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 overflow-hidden shadow-2xl relative">
+                        <div 
+                            className="aspect-[4/5] bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 overflow-hidden shadow-2xl relative cursor-pointer group/image"
+                            onClick={togglePlay}
+                        >
                             <img
                                 src="https://fluencyarc1.vercel.app/assets/img/Naresh-2.jpg"
                                 alt="Expert Tutor"
-                                className="w-full h-full object-cover"
+                                className={`w-full h-full object-cover transition-transform duration-500 group-hover/image:scale-105 ${isPlaying ? 'opacity-50' : 'opacity-100'}`}
                             />
+                            
+                            {/* Play/Pause Button Overlay */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className={`w-20 h-20 bg-white/20 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center text-white transition-all duration-300 group-hover/image:scale-110 group-hover/image:bg-white/30 shadow-2xl ${isPlaying ? 'opacity-0 scale-90 group-hover/image:opacity-100' : 'opacity-100 scale-100'}`}>
+                                    {isPlaying ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                    ) : (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="ml-1"><path d="M5 3l14 9-14 9V3z"></path></svg>
+                                    )}
+                                </div>
+                            </div>
+
                             {/* Floating rating card */}
                             <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-xl flex items-center justify-between">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
-                                    <span className="text-foreground text-sm font-bold">Expert Tutor</span>
+                                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white">✓</div>
+                                    <span className="text-white text-sm font-bold">Expert Tutor</span>
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <span className="text-yellow-500">★</span>
-                                    <span className="text-foreground text-sm font-bold">4.9</span>
+                                    <span className="text-white text-sm font-bold">4.9</span>
                                 </div>
                             </div>
                         </div>
@@ -69,6 +91,25 @@ const TutorProfile = () => {
                                 <p className="text-sm text-white/60 font-bold uppercase tracking-wide">Years Exp.</p>
                             </div>
                         </div>
+                        
+                        <div className="pt-4">
+                           <button 
+                             onClick={togglePlay}
+                             className="px-8 py-4 bg-white text-[#013d45] rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-3 shadow-xl active:scale-95"
+                           >
+                            {isPlaying ? (
+                                <>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                 Pause Intro
+                                </>
+                            ) : (
+                                <>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"></path></svg>
+                                 Watch Intro
+                                </>
+                            )}
+                           </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,3 +118,4 @@ const TutorProfile = () => {
 };
 
 export default TutorProfile;
+
