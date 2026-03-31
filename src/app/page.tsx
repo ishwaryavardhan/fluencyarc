@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
+import Services2 from "@/components/Servicescopy";
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
       <LearningGoals />
       <Services />
       <Testimonials />
-      <FAQ />
       <RegisterSection />
+      <FAQ />
+      <Services2 />
       <Footer />
     </main>
   );
