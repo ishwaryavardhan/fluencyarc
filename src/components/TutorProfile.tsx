@@ -40,17 +40,6 @@ const TutorProfile = () => {
                                 className={`w-full h-full object-cover transition-transform duration-500 group-hover/image:scale-105 ${isPlaying ? 'opacity-50' : 'opacity-100'}`}
                             />
                             
-                            {/* Play/Pause Button Overlay */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className={`w-20 h-20 bg-white/20 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center text-white transition-all duration-300 group-hover/image:scale-110 group-hover/image:bg-white/30 shadow-2xl ${isPlaying ? 'opacity-0 scale-90 group-hover/image:opacity-100' : 'opacity-100 scale-100'}`}>
-                                    {isPlaying ? (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
-                                    ) : (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="ml-1"><path d="M5 3l14 9-14 9V3z"></path></svg>
-                                    )}
-                                </div>
-                            </div>
-
                             {/* Floating rating card */}
                             <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-xl flex items-center justify-between">
                                 <div className="flex items-center gap-2">
@@ -97,17 +86,7 @@ const TutorProfile = () => {
                              onClick={togglePlay}
                              className="px-8 py-4 bg-white text-[#013d45] rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-3 shadow-xl active:scale-95"
                            >
-                            {isPlaying ? (
-                                <>
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
-                                 Pause Intro
-                                </>
-                            ) : (
-                                <>
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"></path></svg>
-                                 Watch Intro
-                                </>
-                            )}
+                            {isPlaying ? "Pause Intro" : "Watch Intro"}
                            </button>
                         </div>
                     </div>

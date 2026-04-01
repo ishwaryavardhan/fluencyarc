@@ -39,7 +39,7 @@ const Header = () => {
                         Login
                     </Link>
                     <Link
-                        href="#hero-form"
+                        href="#pricing"
                         className="bg-[#ebb207] hover:shadow-xl hover:shadow-[#ebb207]/30 text-black px-7 py-3 rounded-full font-bold text-[15px] transition-all active:scale-95 shadow-lg shadow-[#ebb207]/20"
                     >
                         Get Started

@@ -4,28 +4,36 @@ import React, { useState } from "react";
 
 const faqs = [
     {
-        question: "Do I need a high level of English to start?",
-        answer: "Not at all! We have programs for absolute beginners as well as advanced learners. Our tutors tailor the sessions to your current level.",
+        question: "Is this course suitable if I already know English but struggle to speak?",
+        answer: "Yes, this course is designed exactly for that situation. Many learners already understand English but hesitate while speaking. This course focuses on bridging that gap by helping you feel comfortable, calm, and confident when you speak. It does not assume you are a beginner, and it does not test you on grammar."
     },
     {
-        question: "How long is each session?",
-        answer: "Standard sessions are 45-60 minutes long, but we can adjust the duration based on your schedule and focus area.",
+        question: "Will this course teach grammar rules?",
+        answer: "No. This is not a grammar-based course. You don't need to memorise rules or study textbooks. Instead, the course focuses on how English is actually used in real life — through simple language, natural responses, and everyday conversations. Grammar improves naturally as your comfort increases."
     },
     {
-        question: "Can I choose my tutor?",
-        answer: "Yes! After your trial session, you can choose from our pool of expert tutors based on their specialization and your comfort.",
+        question: "I feel nervous speaking English. Will this course put me on the spot?",
+        answer: "No. This is a recorded, self-paced course. There are no live sessions, no forced speaking, and no public interaction. All activities are designed for you to do privately by pausing the video, thinking quietly, or practising a sentence on your own."
     },
     {
-        question: "What if I need to cancel a class?",
-        answer: "We offer free cancellations up to 12 hours before the scheduled class. You can easily reschedule through our student portal.",
+        question: "How is this course different from other spoken English courses?",
+        answer: "Most courses focus on what you should say. This course focuses on how you feel while speaking. Instead of adding more rules, it helps you reduce overthinking, fear, and self-judgement. The goal is not to sound perfect, but to speak freely and naturally in real situations."
     },
+    {
+        question: "How much time do I need to spend each day?",
+        answer: "Each video is short and focused. You can watch one video a day or take more time if you prefer. There is no fixed schedule. Many learners spend 30–45 minutes per session, depending on how they choose to practise. You move at your own pace."
+    },
+    {
+        question: "What if I don't practise every day?",
+        answer: "That's okay. This course is designed to support real life, not add pressure. Even listening to the videos regularly will create awareness and change. Practice is encouraged, but perfection is not required. Progress here is gentle and cumulative."
+    }
 ];
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section id="faq" className="py-8 md:py-32 bg-white">
+        <section id="faq" className="py-8 md:py-12 bg-white">
             <div className="container mx-auto px-6">
                 <div className="grid lg:grid-cols-12 gap-16 items-start">
                     <div className="lg:col-span-5 space-y-8">
