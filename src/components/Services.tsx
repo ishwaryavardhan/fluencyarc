@@ -128,9 +128,12 @@ const Services = () => {
                                         onChange={handleChange}
                                         className="w-full px-6 py-4 rounded-2xl bg-surface border border-slate-100 focus:border-[#013d45] focus:ring-4 focus:ring-[#013d45]/5 transition-all outline-none font-medium appearance-none cursor-pointer"
                                     >
-                                        <option>Beginner</option>
-                                        <option>Intermediate</option>
-                                        <option>Advanced</option>
+                                        <option value="" >Select your level</option>
+                                        <option value="nervous">I understand English, but I feel nervous speaking.</option>
+                                        <option value="not_confident">I can speak, but I don't sound confident.</option>
+                                        <option value="polished">I speak fluently, but I want to sound more natural and polished.</option>
+                                        <option value="difficult">I find it difficult to speak in English.</option>
+                                  
                                     </select>
                                 </div>
 

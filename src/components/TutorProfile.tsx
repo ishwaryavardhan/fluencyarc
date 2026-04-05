@@ -59,8 +59,8 @@ const TutorProfile = () => {
                             Meet Your Guide
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black leading-tight">
-                            Unlock Your <br />
-                            <span className="underline decoration-accent underline-offset-8">Language Potential</span>
+                            A Structured <br />
+                            <span className="underline decoration-accent underline-offset-8">Approach to Speaking Confidence</span>
                         </h2>
                         <p className="text-xl text-white/80 leading-relaxed max-w-xl font-medium">
                             &quot;I believe everyone has a unique voice. My mission is to help you find yours in English, with confidence and clarity.&quot;
@@ -82,12 +82,7 @@ const TutorProfile = () => {
                         </div>
                         
                         <div className="pt-4">
-                           <button 
-                             onClick={togglePlay}
-                             className="px-8 py-4 bg-white text-[#013d45] rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-3 shadow-xl active:scale-95"
-                           >
-                            {isPlaying ? "Pause Intro" : "Watch Intro"}
-                           </button>
+                         
                         </div>
                     </div>
                 </div>

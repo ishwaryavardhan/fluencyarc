@@ -9,6 +9,10 @@ import FAQ from "@/components/FAQ";
 import RegisterSection from "@/components/RegisterSection";
 import Footer from "@/components/Footer";
 import Services2 from "@/components/Servicescopy";
+import TargetAudience from "@/components/TargetAudience";
+import Suitability from "@/components/Suitability";
+import MasterclassDetails from "@/components/MasterclassDetails";
+import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
   return (
@@ -17,10 +21,14 @@ export default function Home() {
       <Hero />
       <TutorProfile />
       <WebShorties />
+      <TargetAudience />
+      <Suitability />
       <LearningGoals />
+      <MasterclassDetails />
       <Services />
       <Testimonials />
       <RegisterSection />
+      <FinalCTA />
       <FAQ />
       <Services2 />
       <Footer />

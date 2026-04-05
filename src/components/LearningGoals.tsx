@@ -17,9 +17,9 @@ const LearningGoals = () => {
                 <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-8">
                   <span className="text-xl">🎯</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">1-on-1 Immersive Mastery</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Awareness</h3>
                 <p className="text-white/70 text-lg leading-relaxed max-w-xl">
-                  Why waste hours in groups? Your mentor focuses 100% on your gaps, making every minute 3x more effective than a standard classroom.
+               You understand what is actually causing hesitation.
                 </p>
               </div>
             </div>
@@ -31,10 +31,9 @@ const LearningGoals = () => {
                 <div className="w-12 h-12 bg-[#013d45]/10 rounded-full flex items-center justify-center mb-6">
                   <span className="text-xl text-[#013d45]">🧠</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#013d45] mb-4">Native Brain Rewiring</h3>
+                <h3 className="text-xl font-bold text-[#013d45] mb-4">Controlled Speaking</h3>
                 <p className="text-gray-500 font-medium leading-relaxed">
-                  Stop the mental translation loop. We train your subconscious to think directly in English from day one.
-                </p>
+You learn how to speak even when you don’t feel fully ready.                </p>
               </div>
 
               {/* Instant Calibration */}
@@ -42,10 +41,9 @@ const LearningGoals = () => {
                 <div className="w-12 h-12 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6">
                   <span className="text-xl">✨</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#013d45] mb-4">Instant Calibration</h3>
+                <h3 className="text-xl font-bold text-[#013d45] mb-4">Pattern Building</h3>
                 <p className="text-gray-500 font-medium leading-relaxed">
-                  Correct habits in real-time. Avoid the "permanent plateau" that kills 90% of language learners globally.
-                </p>
+You start using simple, repeatable speaking structures                </p>
               </div>
             </div>
           </div>
@@ -58,10 +56,9 @@ const LearningGoals = () => {
                 </div>
              </div>
              
-             <h3 className="text-2xl md:text-3xl font-bold mb-6">70% More Talking Time</h3>
+             <h3 className="text-2xl md:text-3xl font-bold mb-6">Real Conversation Application</h3>
              <p className="text-white/70 text-lg leading-relaxed mb-auto px-4">
-                In traditional classes, students speak for ~5 mins. Here, you dominate the conversation for 40+ minutes per session.
-             </p>
+You begin applying this in real situations             </p>
 
              {/* Progress Bar Section */}
              <div className="w-full mt-12 mb-4">
