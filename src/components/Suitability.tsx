@@ -32,18 +32,18 @@ export default function Suitability() {
 
   const itemVariants = {
     hidden: { x: -20, opacity: 0 },
-    visible: { 
-      x: 0, 
+    visible: {
+      x: 0,
       opacity: 1,
       transition: { type: "spring" as const, stiffness: 100 }
     }
   };
 
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
+    <section className="py-10 px-6 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          
+
           {/* This Is For You If */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -52,12 +52,12 @@ export default function Suitability() {
             className="bg-[#f0fafa] p-10 md:p-14 rounded-[3rem] border border-[#d1e9e9] relative overflow-hidden group shadow-lg shadow-[#013d45]/5"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#013d45]/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
-            
+
             <h2 className="text-3xl md:text-5xl font-black text-[#013d45] mb-10 leading-tight">
               This Is For You If
             </h2>
-            
-            <motion.div 
+
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -85,7 +85,7 @@ export default function Suitability() {
             className="bg-[#fffafa] p-10 md:p-14 rounded-[3rem] border border-[#f5e1e1] relative overflow-hidden group shadow-lg shadow-red-500/5"
           >
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-500/5 rounded-full -mr-16 -mb-16 group-hover:scale-150 transition-transform duration-700" />
-            
+
             <div className="mb-10">
               <span className="text-sm font-black text-red-500 uppercase tracking-[0.2em] mb-4 block px-3 py-1 bg-red-50 w-fit rounded-lg shadow-sm border border-red-100">
                 9️⃣ WHO THIS IS NOT FOR
@@ -94,8 +94,8 @@ export default function Suitability() {
                 This Is Not For You If
               </h2>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"

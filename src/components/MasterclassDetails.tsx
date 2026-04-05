@@ -34,13 +34,13 @@ const details = [
 
 export default function MasterclassDetails() {
   return (
-    <section className="py-24 px-6 bg-[#013d45] relative overflow-hidden">
+    <section className="py-10 px-6 bg-[#013d45] relative overflow-hidden">
       {/* Decorative patterns */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl opacity-30" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400/10 rounded-full -ml-32 -mb-32 blur-3xl opacity-30" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -62,8 +62,8 @@ export default function MasterclassDetails() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.05, 
+              whileHover={{
+                scale: 1.05,
                 rotate: index % 2 === 0 ? 1 : -1,
                 boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)"
               }}
