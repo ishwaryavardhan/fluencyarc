@@ -72,10 +72,10 @@ export default function TargetAudience() {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
+    <section className="py-10 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -91,7 +91,7 @@ export default function TargetAudience() {
         </motion.div>
 
         {/* Top Grid: Audience Segments */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -103,11 +103,10 @@ export default function TargetAudience() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.03, rotate: index % 2 === 0 ? 0.5 : -0.5 }}
-              className={`group p-8 rounded-2xl transition-all duration-300 relative flex flex-col items-start ${
-                item.highlight
+              className={`group p-8 rounded-2xl transition-all duration-300 relative flex flex-col items-start ${item.highlight
                   ? "bg-white border-2 border-[#ebb207] shadow-[0_20px_50px_-20px_rgba(235,178,7,0.3)]"
                   : "bg-white border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]"
-              }`}
+                }`}
             >
               <div className="bg-[#fff9e6] w-12 h-12 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
@@ -123,7 +122,7 @@ export default function TargetAudience() {
         </motion.div>
 
         {/* Bottom Grid: Key Features */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

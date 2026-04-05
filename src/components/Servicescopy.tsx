@@ -21,7 +21,7 @@ const Services2 = () => {
     };
 
     return (
-        <section id="pricing" className="py-24 bg-[#013d45] overflow-hidden">
+        <section id="pricing" className="py-10 bg-[#013d45] overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center">
                     {/* Heading Outside the Card */}
