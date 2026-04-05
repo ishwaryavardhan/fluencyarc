@@ -31,29 +31,22 @@ const Hero = () => {
                         <span className="flex h-2 w-2 rounded-full bg-[#013d45] animate-pulse"></span>
                         Speak with Confidence Today!
                     </div>
-                    <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-foreground leading-[1.1] md:leading-[1] tracking-tight">
-                        Is Fluency in English <br />
-                        <span className="text-[#013d45] italic">holding you back?</span>
+                    <h1 className="text-4xl md:text-7xl lg:text-7xl font-black text-foreground leading-[1.1] md:leading-[1] tracking-tight">
+                    You Don’t Lack English Speaking Skills <br />
+                        <span className="text-[#013d45] italic text-5xl">You Lack Confidence.You understand conversations.
+But when it’s your turn to speak, you hesitate.</span>
                     </h1>
                     <div className="space-y-4">
                         <p className="text-xl md:text-3xl font-extrabold text-foreground/90">
-                            Join our exclusive <span className="bg-[#013d45]/10 px-3 py-1 rounded-lg"> Masterclass</span>
+                            Join my 90-minute Masterclass 
+and begin your <span className="bg-[#013d45]/10 px-3 py-1 rounded-lg block max-w-sm mx-auto"> Fluency Journey </span>
                         </p>
                         <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto font-medium leading-relaxed px-4 md:px-0">
                             A practical, Confidence-First session that will make you speak naturally and confidently.
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
-                        <div className="bg-white px-5 py-2.5 md:px-6 md:py-3 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-3">
-                            <span className="text-xl md:text-2xl">⏰</span>
-                            <span className="font-bold text-foreground text-sm md:text-base">1.5h Masterclass</span>
-                        </div>
-                        <div className="bg-[#ebb207] px-5 py-2.5 md:px-6 md:py-3 rounded-2xl shadow-sm border border-[#ebb207]/20 flex items-center gap-3">
-                            <span className="text-xl md:text-2xl">🎓</span>
-                            <span className="font-bold text-black text-sm md:text-base">Interactive Learning</span>
-                        </div>
-                    </div>
+                   
 
                     <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 md:gap-10 pt-8">
                         <button 
@@ -67,7 +60,7 @@ const Hero = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="ml-1"><path d="M5 3l14 9-14 9V3z"></path></svg>
                                 )}
                             </div>
-                            <span>{isPlaying ? 'Pause Intro' : 'Watch Intro'}</span>
+                            
                         </button>
 
                         <div className="flex items-center gap-6 md:gap-10">
