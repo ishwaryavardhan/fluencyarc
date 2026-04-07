@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 const TutorProfile = () => {
@@ -18,8 +18,26 @@ const TutorProfile = () => {
         }
     };
 
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        if (!isPlaying) return;
+
+        const handleScroll = () => {
+            if (videoRef.current) {
+                videoRef.current.pause();
+            }
+            setIsPlaying(false);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true, once: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isPlaying]);
+
     return (
-        <section id="mentor" className="py-8 bg-white overflow-hidden relative group">
+        <section id="mentor" ref={sectionRef} className="py-8 bg-white overflow-hidden relative group">
             <div className="absolute inset-0 z-0">
                 
                 <div className={`absolute inset-0 transition-opacity duration-700 ${isPlaying ? 'bg-[#013d45]/40' : 'bg-[#013d45]/80'}`}></div>

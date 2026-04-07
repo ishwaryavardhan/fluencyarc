@@ -13,7 +13,7 @@ const faqs = [
     },
     {
         question: "I feel nervous speaking English. Will this course put me on the spot?",
-        answer: "No. This is a recorded, self-paced course. There are no live sessions, no forced speaking, and no public interaction. All activities are designed for you to do privately by pausing the video, thinking quietly, or practising a sentence on your own."
+        answer: "No. This is a mainly recorded, self-paced course. There are weekly live sessions, no forced speaking, and no public interaction, till you are ready to participate. All activities are designed for you to do at your own pace, privately by pausing the video, thinking quietly, or practising a sentence on your own. You can speak only once you are ready and wish to take part."
     },
     {
         question: "How is this course different from other spoken English courses?",
@@ -49,7 +49,7 @@ const FAQ = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#013d45]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform"></div>
                                 <h4 className="text-2xl font-black mb-3">Still have questions?</h4>
                                 <p className="text-text-secondary mb-8 font-medium">Our team is here to help you find the right path and answer any technical queries.</p>
-                                <a href="mailto:support@fluencyarc.com" className="inline-flex items-center gap-2 font-black text-[#013d45] group-hover:gap-3 transition-all underline underline-offset-4 decoration-2">
+                                <a href="https://api.whatsapp.com/send?phone=918123383399" className="inline-flex items-center gap-2 font-black text-[#013d45] group-hover:gap-3 transition-all underline underline-offset-4 decoration-2">
                                     Contact Support →
                                 </a>
                             </div>
