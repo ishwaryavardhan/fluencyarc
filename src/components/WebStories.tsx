@@ -103,9 +103,10 @@ export default function WebShorties() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-    const [mutedStates, setMutedStates] = useState<boolean[]>(shorts.map(() => true));
+    const [mutedStates, setMutedStates] = useState<boolean[]>(shorts.map(() => false));
     const [activeIdx, setActiveIdx] = useState<number>(0);
     const [isVisible, setIsVisible] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const scroll = (dir: "left" | "right") => {
         containerRef.current?.scrollBy({ left: dir === "left" ? -300 : 300, behavior: "smooth" });
@@ -121,7 +122,12 @@ export default function WebShorties() {
     };
 
     const handleCardClick = (idx: number) => {
-        setActiveIdx(idx);
+        if (activeIdx === idx) {
+            setIsPlaying(!isPlaying);
+        } else {
+            setActiveIdx(idx);
+            setIsPlaying(true);
+        }
     };
 
     useEffect(() => {
@@ -140,8 +146,11 @@ export default function WebShorties() {
     useEffect(() => {
         videoRefs.current.forEach((video, i) => {
             if (!video) return;
-            if (i === activeIdx && isVisible) {
-                video.play().catch(() => { });
+            if (i === activeIdx && isVisible && isPlaying) {
+                video.muted = mutedStates[i];
+                video.play().catch(() => {
+                    if (i === activeIdx) setIsPlaying(false);
+                });
             } else {
                 video.pause();
                 if (i !== activeIdx) {
@@ -149,7 +158,7 @@ export default function WebShorties() {
                 }
             }
         });
-    }, [activeIdx, isVisible]);
+    }, [activeIdx, isVisible, isPlaying, mutedStates]);
 
     return (
         <section id="testimonials" ref={scrollRef} className="relative bg-gradient-to-br from-[#013d45] via-[#012a2f] to-[#013d45] py-10 overflow-hidden">
@@ -239,11 +248,17 @@ export default function WebShorties() {
                                 <video
                                     ref={el => { videoRefs.current[i] = el; }}
                                     src={s.videoSrc}
-                                    muted
                                     loop
                                     playsInline
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
+
+                                {/* Play Button Overlay */}
+                                <div className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 z-20 ${isActive && isPlaying ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}>
+                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-xl border border-white/30 rounded-full flex items-center justify-center text-white shadow-xl group-hover:bg-white/30 transition-all group-hover:scale-110">
+                                        <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                                    </div>
+                                </div>
 
                                 {/* Green Gradient Overlay */}
                                 <div

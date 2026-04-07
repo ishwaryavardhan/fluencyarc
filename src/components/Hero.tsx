@@ -83,9 +83,9 @@ const Hero = () => {
                     <Quote className="absolute -top-6 -left-6 md:-left-12 w-12 h-12 md:w-20 md:h-20 text-[#013d45]/10 rotate-180" />
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.08)] border border-gray-50 text-center">
                         <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed">
-                            You Lack <span className="text-[#01a47e] italic">Confidence</span>.<br />
-                            You understand <span className="text-[#01a47e]">conversations</span>.<br className="hidden md:block" />
-                            But when it's your turn to speak, you hesitate.
+                            You Lack Confidence.<br />
+                            You understand conversations,<br className="hidden md:block" />
+                            but when it's your turn to speak, you hesitate.
                         </p>
                     </div>
                 </motion.div>
@@ -98,10 +98,10 @@ const Hero = () => {
                 >
                     <a href="#register" className="relative group">
                         <div className="absolute inset-0 bg-[#01a47e] rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                        <div className="relative bg-[#021f1a] text-white px-10 py-5 md:px-14 md:py-6 rounded-full font-black text-xl md:text-2xl flex items-center gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95">
-                            <Sparkles className="w-6 h-6 text-yellow-400" />
+                        <div className="relative bg-[#021f1a] text-white px-5 py-4 sm:px-10 sm:py-5 md:px-14 md:py-6 rounded-full font-black text-[15px] sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95 whitespace-nowrap">
+                            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 shrink-0" />
                             Join my 90 min masterclass
-                            <Rocket className="w-6 h-6 text-pink-400" />
+                            <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-pink-400 shrink-0" />
                         </div>
                     </a>
                 </motion.div>
@@ -162,7 +162,6 @@ const Hero = () => {
                     <video
                         ref={videoRef}
                         className="w-full h-full object-contain"
-                        muted
                         loop
                         playsInline
                     >
