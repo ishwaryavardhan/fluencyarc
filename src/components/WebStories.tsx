@@ -171,7 +171,7 @@ export default function WebShorties() {
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-white leading-none mb-6">
-                            Client <span className="text-[#ebb207] italic underline decoration-white/10 underline-offset-8">Testimonials</span>
+                            Students <span className="text-[#ebb207] italic underline decoration-white/10 underline-offset-8">Testimonials</span>
                         </h2>
                         <p className="text-white/70 text-lg max-w-xl font-medium leading-relaxed">
                             Watch how our students transform. Short, impactful feedback and lessons engineered for real-world fluency.
