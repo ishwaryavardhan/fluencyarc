@@ -47,7 +47,7 @@ const Footer = () => {
                             fill
                             className="object-contain"
                         />
-                        <span className="absolute -right-6 top-0 text-sm font-bold text-gray-400">®</span>
+                        <span className="absolute -right-6 top-0 text-sm font-bold text-gray-400">TM</span>
                     </div>
                 </div>
 
@@ -89,13 +89,13 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h5 className="font-black text-[13px] uppercase tracking-widest text-[#013d45]">Follow Us</h5>
                         <div className="flex gap-4 justify-center md:justify-start pt-2">
-                            <a href="#" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
+                            <a href="https://www.instagram.com/fluencyarc_edu?igsh=MW1zMnF3dXhsbTZ1dQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
+                            <a href="https://www.facebook.com/share/1CXXxioKyW/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
+                            <a href="https://youtube.com/@fluencyarc?si=hgUDe9Yex-lzAacX" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
                                 <Youtube size={20} />
                             </a>
                             <a href="#" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-[#042900] hover:bg-[#013d45] hover:text-white transition-colors border border-slate-200 shadow-sm">
