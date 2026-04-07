@@ -82,10 +82,9 @@ const Hero = () => {
                 >
                     <Quote className="absolute -top-6 -left-6 md:-left-12 w-12 h-12 md:w-20 md:h-20 text-[#013d45]/10 rotate-180" />
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.08)] border border-gray-50 text-center">
-                        <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed">
+                        <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed mx-auto max-w-xl">
                             You Lack Confidence.<br />
-                            You understand conversations,<br className="hidden md:block" />
-                            but when it's your turn to speak, you hesitate.
+                            You understand conversations, but when it's your turn to speak, you hesitate.
                         </p>
                     </div>
                 </motion.div>
