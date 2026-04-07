@@ -68,13 +68,13 @@ const TutorProfile = () => {
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black leading-tight">
                            
-                            <span className="underline decoration-accent underline-offset-8">Meet the Mentor</span>
+                            <span className="underline decoration-accent underline-offset-8">Meet Your Mentor</span>
                         </h2>
                         <div className="text-base md:text-lg text-white/90 leading-relaxed max-w-2xl font-medium space-y-4">
-                            <p>
+                            <p className="text-justify">
                                 Naresh Bhandia is a Certified Corporate Trainer, Facilitator, and Fluency Expert with over 35 years of professional experience in the manufacturing sector, corporate consulting, and leadership development. He has successfully guided organizations through business growth, operational transformation, and leadership challenges, working closely with founders, executives, and management teams.
                             </p>
-                            <p>
+                            <p className="text-justify">
                                 Building on his decades of expertise, Naresh has launched FluencyArc, a spoken English training program created for individuals who struggle with confidence in communication. The program moves beyond grammar-based learning to emphasize practical speaking skills, everyday communication, and professional fluency.
                             </p>
                         </div>
