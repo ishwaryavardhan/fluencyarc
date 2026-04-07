@@ -77,14 +77,14 @@ const Hero = () => {
                     transition={{ delay: 0.4 }}
                     className="flex justify-center mb-10"
                 >
-                    <button className="relative group">
+                    <a href="#register" className="relative group">
                         <div className="absolute inset-0 bg-[#01a47e] rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
                         <div className="relative bg-[#021f1a] text-white px-10 py-5 md:px-14 md:py-6 rounded-full font-black text-xl md:text-2xl flex items-center gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95">
                             <Sparkles className="w-6 h-6 text-yellow-400" />
                             Join my 90 min masterclass
                             <Rocket className="w-6 h-6 text-pink-400" />
                         </div>
-                    </button>
+                    </a>
                 </motion.div>
 
                 {/* 3. Quote Card */}
