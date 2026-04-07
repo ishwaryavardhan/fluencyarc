@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import TargetAudience from "@/components/TargetAudience";
 import Suitability from "@/components/Suitability";
 import MasterclassDetails from "@/components/MasterclassDetails";
+import RegisterSection from "@/components/RegisterSection";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -20,6 +22,7 @@ export default function Home() {
       <LearningGoals />
       <MasterclassDetails />
       <FAQ />
+      <RegisterSection />
       <Footer />
     </main>
   );
