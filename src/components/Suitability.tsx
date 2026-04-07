@@ -3,22 +3,50 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle } from "lucide-react";
 
-/**
- * Suitability Component
- * Highlights who the course is designed for and who should avoid it.
- */
-
 const isForContent = [
-  "You understand English but hesitate to speak",
-  "You often stay silent even when you have something to say",
-  "You replay conversations and feel you should have spoken",
-  "You are ready to correct this pattern"
+  {
+    title: "1️⃣ You understand English but hesitate to speak",
+    desc: "You can follow conversations, read comfortably, and understand what others are saying — but when it’s your turn to speak, you pause or hold back."
+  },
+  {
+    title: "2️⃣ You often have something to say, but don’t say it",
+    desc: "In meetings, discussions, or everyday situations, you have ideas — but you stay silent because you are unsure how to express them."
+  },
+  {
+    title: "3️⃣ You think in your mind, but struggle to say it out loud",
+    desc: "Your thoughts are clear internally, but converting them into spoken English feels slow, difficult, or stressful."
+  },
+  {
+    title: "4️⃣ You are tired of depending on “perfect sentences”",
+    desc: "You wait to form the right sentence before speaking — and because of that, you miss opportunities to participate."
+  },
+  {
+    title: "5️⃣ You are ready to practice speaking, not just learn more",
+    desc: "You are not looking for more grammar or vocabulary. You are ready to work on how you actually speak in real conversations."
+  }
 ];
 
 const isNotForContent = [
-  "You are looking for shortcuts",
-  "You only want grammar or vocabulary",
-  "You prefer passive learning over practice"
+  {
+    title: "1️⃣ You are looking for shortcuts or quick fixes",
+    desc: "If you expect to become fluent in a few days without consistent practice, this will not work for you. This course focuses on real change, not quick results."
+  },
+  {
+    title: "2️⃣ You only want to learn grammar or vocabulary",
+    desc: "If your focus is only on rules, exercises, or word lists, this is not the right place. This course is about speaking behaviour, not theory."
+  },
+  {
+    title: "3️⃣ You prefer passive learning",
+    desc: "If you like watching videos but do not actively practise speaking, you will not benefit from this. Improvement comes from participation, not consumption."
+  },
+  {
+    title: "4️⃣ You are not willing to feel slightly uncomfortable",
+    desc: "Speaking more requires stepping out of your comfort zone. If you want to stay completely comfortable and avoid mistakes, this approach will feel difficult."
+  },
+  {
+    title: "5️⃣ You are not ready to change your speaking habits",
+    desc: "If you are not open to trying a different way of speaking — even if it feels unfamiliar at first — this course may not be effective for you."
+  }
 ];
 
 export default function Suitability() {
@@ -54,7 +82,7 @@ export default function Suitability() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#013d45]/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
 
             <h2 className="text-3xl md:text-5xl font-black text-[#013d45] mb-10 leading-tight">
-              This Is For You If
+              Who is this course for?
             </h2>
 
             <motion.div
@@ -64,14 +92,19 @@ export default function Suitability() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              {isForContent.map((text, i) => (
+              {isForContent.map((item, i) => (
                 <motion.div key={i} variants={itemVariants} className="flex gap-5 items-start">
-                  <div className="bg-[#013d45] w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-lg shadow-[#013d45]/20">
-                    <CheckCircle2 className="w-4 h-4 text-white" strokeWidth={3} />
+                  <div className="mt-1 flex-shrink-0">
+                    <CheckCircle2 className="w-6 h-6 text-[#013d45]" strokeWidth={2.5} />
                   </div>
-                  <p className="text-gray-700 text-lg md:text-xl font-bold leading-snug">
-                    {text}
-                  </p>
+                  <div>
+                    <h4 className="text-gray-800 text-lg md:text-xl font-bold leading-snug mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-[15px] font-medium leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -88,10 +121,10 @@ export default function Suitability() {
 
             <div className="mb-10">
               <span className="text-sm font-black text-red-500 uppercase tracking-[0.2em] mb-4 block px-3 py-1 bg-red-50 w-fit rounded-lg shadow-sm border border-red-100">
-                9️⃣ WHO THIS IS NOT FOR
+                WHO THIS IS NOT FOR
               </span>
               <h2 className="text-3xl md:text-5xl font-black text-red-900 leading-tight">
-                This Is Not For You If
+                Not for you
               </h2>
             </div>
 
@@ -102,14 +135,19 @@ export default function Suitability() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              {isNotForContent.map((text, i) => (
+              {isNotForContent.map((item, i) => (
                 <motion.div key={i} variants={itemVariants} className="flex gap-5 items-start">
-                  <div className="bg-red-100 w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <XCircle className="w-4 h-4 text-red-600" strokeWidth={3} />
+                  <div className="mt-1 flex-shrink-0">
+                    <XCircle className="w-6 h-6 text-red-600" strokeWidth={2.5} />
                   </div>
-                  <p className="text-gray-700 text-lg md:text-xl font-bold leading-snug">
-                    {text}
-                  </p>
+                  <div>
+                    <h4 className="text-gray-800 text-lg md:text-xl font-bold leading-snug mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-[15px] font-medium leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>

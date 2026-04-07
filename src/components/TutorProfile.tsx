@@ -19,7 +19,7 @@ const TutorProfile = () => {
     };
 
     return (
-        <section className="py-8 bg-white overflow-hidden relative group">
+        <section id="mentor" className="py-8 bg-white overflow-hidden relative group">
             <div className="absolute inset-0 z-0">
                 
                 <div className={`absolute inset-0 transition-opacity duration-700 ${isPlaying ? 'bg-[#013d45]/40' : 'bg-[#013d45]/80'}`}></div>
@@ -40,31 +40,26 @@ const TutorProfile = () => {
                                 className={`w-full h-full object-cover transition-transform duration-500 group-hover/image:scale-105 ${isPlaying ? 'opacity-50' : 'opacity-100'}`}
                             />
                             
-                            {/* Floating rating card */}
-                            <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-xl flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white">✓</div>
-                                    <span className="text-white text-sm font-bold">Expert Tutor</span>
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <span className="text-yellow-500">★</span>
-                                    <span className="text-white text-sm font-bold">4.9</span>
-                                </div>
-                            </div>
+                            {/* Removed Floating rating card as requested */}
                         </div>
                     </div>
 
                     <div className="relative z-10 w-full md:w-2/3 space-y-8">
                         <div className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-sm font-bold tracking-wide uppercase">
-                            Meet Your Guide
+                            Mentor
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black leading-tight">
                             A Structured <br />
                             <span className="underline decoration-accent underline-offset-8">Approach to Speaking Confidence</span>
                         </h2>
-                        <p className="text-xl text-white/80 leading-relaxed max-w-xl font-medium">
-                            &quot;I believe everyone has a unique voice. My mission is to help you find yours in English, with confidence and clarity.&quot;
-                        </p>
+                        <div className="text-base md:text-lg text-white/90 leading-relaxed max-w-2xl font-medium space-y-4">
+                            <p>
+                                Naresh Bhandia is a Certified Corporate Trainer, Facilitator, and Fluency Expert with over 35 years of professional experience in the manufacturing sector, corporate consulting, and leadership development. He has successfully guided organizations through business growth, operational transformation, and leadership challenges, working closely with founders, executives, and management teams.
+                            </p>
+                            <p>
+                                Building on his decades of expertise, Naresh has launched FluencyArc, a spoken English training program created for individuals who struggle with confidence in communication. The program moves beyond grammar-based learning to emphasize practical speaking skills, everyday communication, and professional fluency.
+                            </p>
+                        </div>
 
                         <div className="grid grid-cols-3 gap-6 pt-4">
                             <div>

@@ -21,7 +21,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-[#fdfaff]">
+        <section className="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-[#fdfaff]">
             {/* Background Orbs & Gradients */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#013d45]/5 to-transparent rounded-full blur-[120px] -z-10"></div>
             
@@ -64,21 +64,12 @@ const Hero = () => {
                     <Quote className="absolute -top-6 -left-6 md:-left-12 w-12 h-12 md:w-20 md:h-20 text-[#013d45]/10 rotate-180" />
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.08)] border border-gray-50 text-center">
                         <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed">
-                            You Lack <span className="text-[#01a47e] italic">Confidence</span>. You understand <span className="text-[#01a47e]">conversations</span>.<br className="hidden md:block" />
+                            You Lack <span className="text-[#01a47e] italic">Confidence</span>.<br />
+                            You understand <span className="text-[#01a47e]">conversations</span>.<br className="hidden md:block" />
                             But when it's your turn to speak, you hesitate.
                         </p>
                     </div>
                 </motion.div>
-
-                {/* 4. Action Text */}
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="text-center text-lg md:text-xl font-bold text-gray-700 mb-8"
-                >
-                    Join my 90-minute Masterclass and begin your
-                </motion.p>
 
                 {/* 5. Main Glow Button */}
                 <motion.div
@@ -91,7 +82,7 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-[#01a47e] rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
                         <div className="relative bg-[#021f1a] text-white px-10 py-5 md:px-14 md:py-6 rounded-full font-black text-xl md:text-2xl flex items-center gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95">
                             <Sparkles className="w-6 h-6 text-yellow-400" />
-                            Fluency Journey
+                            Join my 90 min masterclass
                             <Rocket className="w-6 h-6 text-pink-400" />
                         </div>
                     </button>
@@ -102,33 +93,15 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="flex justify-center mb-16"
+                    className="flex flex-col items-center gap-2 mb-16"
                 >
+                    <p className="text-center text-lg md:text-xl font-bold text-gray-700">
+                        Begin your fluency journey
+                    </p>
                     <div className="inline-flex px-8 py-4 bg-white/50 backdrop-blur-sm border border-white rounded-full shadow-sm text-sm md:text-base font-medium text-gray-500 text-center max-w-lg">
                         <p>
-                            A practical, <span className="text-[#01a47e] font-bold">Confidence-First</span> session that will make you speak naturally and confidently.
+                            A practical, Confidence-First session that will make you speak naturally and confidently.
                         </p>
-                    </div>
-                </motion.div>
-
-                {/* 7. Feature Badges */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    className="flex flex-wrap justify-center gap-4 mb-12"
-                >
-                    <div className="flex items-center gap-2.5 px-6 py-2.5 bg-white rounded-full border border-gray-100 shadow-sm transition-hover hover:border-[#013d45]/20">
-                        <div className="bg-orange-50 p-1.5 rounded-full">
-                           <Clock className="w-5 h-5 text-orange-500" />
-                        </div>
-                        <span className="font-bold text-gray-700 text-sm">1.5 Hours Masterclass</span>
-                    </div>
-                    <div className="flex items-center gap-2.5 px-6 py-2.5 bg-white rounded-full border border-gray-100 shadow-sm transition-hover hover:border-[#013d45]/20">
-                        <div className="bg-purple-50 p-1.5 rounded-full">
-                           <GraduationCap className="w-5 h-5 text-purple-500" />
-                        </div>
-                        <span className="font-bold text-gray-700 text-sm">Interactive Learning</span>
                     </div>
                 </motion.div>
 
@@ -170,7 +143,7 @@ const Hero = () => {
                 >
                     <video
                         ref={videoRef}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                         muted
                         loop
                         playsInline
