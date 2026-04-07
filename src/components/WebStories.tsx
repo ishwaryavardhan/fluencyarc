@@ -8,7 +8,7 @@ import Link from "next/link";
 const shorts = [
     {
         id: 1,
-        tag: "Success Story",
+        tag: "HW / Working Women",
         title: "Journey to Fluency: Real Feedback",
         client: "Fluency Arc",
         views: "1.2M views",
@@ -101,12 +101,14 @@ const shorts = [
 
 export default function WebShorties() {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
     const [mutedStates, setMutedStates] = useState<boolean[]>(shorts.map(() => true));
-    const [activeIdx, setActiveIdx] = useState<number>(3);
+    const [activeIdx, setActiveIdx] = useState<number>(0);
+    const [isVisible, setIsVisible] = useState(true);
 
     const scroll = (dir: "left" | "right") => {
-        scrollRef.current?.scrollBy({ left: dir === "left" ? -300 : 300, behavior: "smooth" });
+        containerRef.current?.scrollBy({ left: dir === "left" ? -300 : 300, behavior: "smooth" });
     };
 
     const toggleMute = (e: React.MouseEvent, idx: number) => {
@@ -123,19 +125,34 @@ export default function WebShorties() {
     };
 
     useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.2 }
+        );
+        if (scrollRef.current) {
+            observer.observe(scrollRef.current);
+        }
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
         videoRefs.current.forEach((video, i) => {
             if (!video) return;
-            if (i === activeIdx) {
+            if (i === activeIdx && isVisible) {
                 video.play().catch(() => { });
             } else {
                 video.pause();
-                video.currentTime = 0;
+                if (i !== activeIdx) {
+                    video.currentTime = 0;
+                }
             }
         });
-    }, [activeIdx]);
+    }, [activeIdx, isVisible]);
 
     return (
-        <section className="relative bg-gradient-to-br from-[#013d45] via-[#012a2f] to-[#013d45] py-10 overflow-hidden">
+        <section id="testimonials" ref={scrollRef} className="relative bg-gradient-to-br from-[#013d45] via-[#012a2f] to-[#013d45] py-10 overflow-hidden">
             {/* Soft Ambient Light */}
             <div
                 className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10 pointer-events-none blur-[100px]"
@@ -154,7 +171,7 @@ export default function WebShorties() {
                             </span>
                         </div>
                         <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-white leading-none mb-6">
-                            Web <span className="text-[#ebb207] italic underline decoration-white/10 underline-offset-8">Stories</span>
+                            Client <span className="text-[#ebb207] italic underline decoration-white/10 underline-offset-8">Testimonials</span>
                         </h2>
                         <p className="text-white/70 text-lg max-w-xl font-medium leading-relaxed">
                             Watch how our students transform. Short, impactful feedback and lessons engineered for real-world fluency.
@@ -180,7 +197,7 @@ export default function WebShorties() {
 
                 {/* Carousel Container */}
                 <div
-                    ref={scrollRef}
+                    ref={containerRef}
                     className="flex gap-4 overflow-x-auto pb-8 pt-2 items-center px-4"
                     style={{
                         scrollSnapType: "x mandatory",

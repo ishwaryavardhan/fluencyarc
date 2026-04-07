@@ -3,11 +3,6 @@
 import { motion } from "framer-motion";
 import { Clock, Video, Zap } from "lucide-react";
 
-/**
- * MasterclassDetails Component
- * Summarizes key information about the masterclass using clean, stylized cards.
- */
-
 const details = [
   {
     label: "DURATION",
@@ -34,7 +29,7 @@ const details = [
 
 export default function MasterclassDetails() {
   return (
-    <section className="py-10 px-6 bg-[#013d45] relative overflow-hidden">
+    <section id="masterclass" className="py-10 px-6 bg-[#013d45] relative overflow-hidden">
       {/* Decorative patterns */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl opacity-30" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-400/10 rounded-full -ml-32 -mb-32 blur-3xl opacity-30" />

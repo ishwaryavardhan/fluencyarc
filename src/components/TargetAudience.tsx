@@ -1,37 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, TrendingUp, GraduationCap, Users, Target, Globe } from "lucide-react";
-
-/**
- * TargetAudience Component
- * Shows who the course is designed for with premium animations and styling.
- */
+import { Target, Globe } from "lucide-react";
 
 const audiences = [
   {
     title: "Working Professionals",
-    description: "Ace meetings, presentations, and client interactions with confidence.",
-    icon: <Briefcase className="w-6 h-6 text-[#f3b23c]" />,
-    highlight: false
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600"
   },
   {
     title: "Business Owners",
-    description: "Grow your business globally by communicating effectively with clients, partners, and stakeholders worldwide.",
-    icon: <TrendingUp className="w-6 h-6 text-[#f3b23c]" />,
-    highlight: false
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600"
   },
   {
     title: "Students & Job Seekers",
-    description: "Excel in interviews, group discussions, and presentations to secure your dream opportunities.",
-    icon: <GraduationCap className="w-6 h-6 text-[#f3b23c]" />,
-    highlight: true
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600"
   },
   {
     title: "Parents",
-    description: "Communicate confidently at PTA meetings and become a strong role model for your children.",
-    icon: <Users className="w-6 h-6 text-[#f3b23c]" />,
-    highlight: false
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=600"
   }
 ];
 
@@ -72,51 +59,48 @@ export default function TargetAudience() {
   };
 
   return (
-    <section className="py-10 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
+    <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20 px-4"
+          className="text-center mb-16 px-4"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#042900] mb-6 tracking-tight">
-            Who is this course for?
+            Who's this for?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Confidently lead meetings, deliver presentations, and handle client
-            interactions with clarity and impact.
+            Confidently lead meetings, deliver presentations, and handle interactions with clarity and impact.
           </p>
         </motion.div>
 
-        {/* Top Grid: Audience Segments */}
+        {/* Top Grid: Audience Segments as Images with Titles */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {audiences.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ scale: 1.03, rotate: index % 2 === 0 ? 0.5 : -0.5 }}
-              className={`group p-8 rounded-2xl transition-all duration-300 relative flex flex-col items-start ${item.highlight
-                  ? "bg-white border-2 border-[#ebb207] shadow-[0_20px_50px_-20px_rgba(235,178,7,0.3)]"
-                  : "bg-white border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]"
-                }`}
+              whileHover={{ scale: 1.03 }}
+              className="group relative rounded-3xl overflow-hidden aspect-[4/5] shadow-xl hover:shadow-2xl transition-all duration-300 border-4 border-white"
             >
-              <div className="bg-[#fff9e6] w-12 h-12 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-6">
+                <h3 className="text-2xl font-black text-white leading-tight group-hover:text-[#ebb207] transition-colors duration-300">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="text-[19px] font-bold text-[#042900] mb-4 leading-tight group-hover:text-[#ebb207] transition-colors duration-300">
-                {item.title}
-              </h3>
-              <p className="text-gray-500 text-[14px] leading-relaxed">
-                {item.description}
-              </p>
             </motion.div>
           ))}
         </motion.div>
