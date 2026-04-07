@@ -115,7 +115,7 @@ export default function Suitability() {
                 YOUR PROFILE
               </span>
               <h2 className="text-3xl md:text-5xl font-black text-[#013d45] leading-tight">
-                Who is this course for?
+                Who is this for?
               </h2>
             </div>
 
