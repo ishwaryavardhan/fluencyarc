@@ -61,20 +61,7 @@ const TutorProfile = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-6 pt-4">
-                            <div>
-                                <p className="text-3xl font-black">1200+</p>
-                                <p className="text-sm text-white/60 font-bold uppercase tracking-wide">Students</p>
-                            </div>
-                            <div>
-                                <p className="text-3xl font-black">500+</p>
-                                <p className="text-sm text-white/60 font-bold uppercase tracking-wide">Sessions</p>
-                            </div>
-                            <div>
-                                <p className="text-3xl font-black">15+</p>
-                                <p className="text-sm text-white/60 font-bold uppercase tracking-wide">Years Exp.</p>
-                            </div>
-                        </div>
+                    
                         
                         <div className="pt-4">
                          
