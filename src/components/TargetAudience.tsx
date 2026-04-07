@@ -68,12 +68,7 @@ export default function TargetAudience() {
           viewport={{ once: true }}
           className="text-center mb-16 px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#042900] mb-6 tracking-tight">
-            Who's this for?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Confidently lead meetings, deliver presentations, and handle interactions with clarity and impact.
-          </p>
+          
         </motion.div>
 
         {/* Top Grid: Audience Segments as Images with Titles */}
