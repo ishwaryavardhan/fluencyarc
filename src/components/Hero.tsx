@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Star, Users, Sparkles, Rocket, Clock, GraduationCap, Quote } from "lucide-react";
 
@@ -20,8 +20,26 @@ const Hero = () => {
         }
     };
 
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        if (!isPlaying) return;
+
+        const handleScroll = () => {
+            if (videoRef.current) {
+                videoRef.current.pause();
+            }
+            setIsPlaying(false);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true, once: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isPlaying]);
+
     return (
-        <section className="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-[#fdfaff]">
+        <section ref={sectionRef} className="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-[#fdfaff]">
             {/* Background Orbs & Gradients */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#013d45]/5 to-transparent rounded-full blur-[120px] -z-10"></div>
             

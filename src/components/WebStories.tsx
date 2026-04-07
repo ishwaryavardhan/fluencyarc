@@ -129,7 +129,7 @@ export default function WebShorties() {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.2 }
+            { threshold: 0.7 }
         );
         if (scrollRef.current) {
             observer.observe(scrollRef.current);
