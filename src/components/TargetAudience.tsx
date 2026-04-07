@@ -18,7 +18,7 @@ const audiences = [
   },
   {
     title: "Parents",
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1536640712-4d4c36ef0e2c?auto=format&fit=crop&q=80&w=600"
   }
 ];
 

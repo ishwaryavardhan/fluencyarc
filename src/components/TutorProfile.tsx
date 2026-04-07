@@ -49,8 +49,8 @@ const TutorProfile = () => {
                             Mentor
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black leading-tight">
-                            A Structured <br />
-                            <span className="underline decoration-accent underline-offset-8">Approach to Speaking Confidence</span>
+                           
+                            <span className="underline decoration-accent underline-offset-8">Meet the Mentor</span>
                         </h2>
                         <div className="text-base md:text-lg text-white/90 leading-relaxed max-w-2xl font-medium space-y-4">
                             <p>
