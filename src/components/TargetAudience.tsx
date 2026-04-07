@@ -59,15 +59,18 @@ export default function TargetAudience() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
+    <section className="py-10 px-4 bg-gradient-to-b from-white to-[#f9faf9] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 px-4"
+          className="text-center mb-10 px-4"
         >
+          <h1 className="text-3xl md:text-5xl font-black text-[#013d45] leading-tight">
+            Who is this course for?
+          </h1>
           
         </motion.div>
 

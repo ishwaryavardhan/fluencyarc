@@ -49,7 +49,7 @@ const FAQ = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#013d45]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform"></div>
                                 <h4 className="text-2xl font-black mb-3">Still have questions?</h4>
                                 <p className="text-text-secondary mb-8 font-medium">Our team is here to help you find the right path and answer any technical queries.</p>
-                                <a href="https://api.whatsapp.com/send?phone=918123383399" className="inline-flex items-center gap-2 font-black text-[#013d45] group-hover:gap-3 transition-all underline underline-offset-4 decoration-2">
+                                <a href="https://api.whatsapp.com/send?phone=917019362125" className="inline-flex items-center gap-2 font-black text-[#013d45] group-hover:gap-3 transition-all underline underline-offset-4 decoration-2">
                                     Contact Support →
                                 </a>
                             </div>
