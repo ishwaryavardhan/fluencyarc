@@ -97,10 +97,10 @@ const Hero = () => {
                 >
                     <a href="#register" className="relative group">
                         <div className="absolute inset-0 bg-[#01a47e] rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                        <div className="relative bg-[#021f1a] text-white px-5 py-4 sm:px-10 sm:py-5 md:px-14 md:py-6 rounded-full font-black text-[15px] sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95 whitespace-nowrap">
-                            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 shrink-0" />
+                        <div className="relative bg-[#021f1a] text-white px-4 py-3 sm:px-10 sm:py-5 md:px-14 md:py-6 rounded-full font-black text-[13px] sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95 whitespace-nowrap">
+                            <Sparkles className="w-4 h-4 sm:w-6 sm:h-6 text-yellow-400 shrink-0" />
                             Join my 90 min masterclass
-                            <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-pink-400 shrink-0" />
+                            <Rocket className="w-4 h-4 sm:w-6 sm:h-6 text-pink-400 shrink-0" />
                         </div>
                     </a>
                 </motion.div>

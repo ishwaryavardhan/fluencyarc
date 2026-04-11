@@ -124,10 +124,10 @@ export default function FinalCTA() {
               <motion.button 
                 whileHover={{ scale: 1.03, boxShadow: "0 25px 50px -12px rgba(235, 178, 7, 0.4)" }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-[#ebb207] text-[#013d45] font-black text-xl md:text-2xl px-16 py-8 rounded-[3rem] shadow-2xl flex items-center gap-4 group transition-all duration-300"
+                className="bg-[#ebb207] text-[#013d45] font-black text-lg md:text-2xl px-10 py-5 md:px-16 md:py-8 rounded-[3rem] shadow-2xl flex items-center gap-4 group transition-all duration-300"
               >
                 REGISTER NOW
-                <ArrowRight className="w-8 h-8 group-hover:translate-x-3 transition-transform duration-300" strokeWidth={3} />
+                <ArrowRight className="w-6 h-6 md:w-8 md:h-8 group-hover:translate-x-3 transition-transform duration-300" strokeWidth={3} />
               </motion.button>
             </motion.div>
           </motion.div>

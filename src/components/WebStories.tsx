@@ -6,15 +6,7 @@ import { Volume2, VolumeX, ArrowRight, ArrowLeft, Play } from "lucide-react";
 import Link from "next/link";
 
 const shorts = [
-    {
-        id: 1,
-        tag: "HW / Working Women",
-        title: "Journey to Fluency: Real Feedback",
-        client: "Fluency Arc",
-        views: "1.2M views",
-        accent: "#ebb207",
-        videoSrc: "/Video%20assets/rose%20and%20leaf/JF%20Feedback.mp4",
-    },
+   
     {
         id: 2,
         tag: "Leadership",
@@ -96,6 +88,14 @@ const shorts = [
         views: "4.2M views",
         accent: "#ebb207",
         videoSrc: "/Video%20assets/rose%20and%20leaf/Life%20Skills%20-%2010.mp4",
+    }, {
+        id: 1,
+        tag: "HW / Working Women",
+        title: "Journey to Fluency: Real Feedback",
+        client: "Fluency Arc",
+        views: "1.2M views",
+        accent: "#ebb207",
+        videoSrc: "/Video%20assets/rose%20and%20leaf/JF%20Feedback.mp4",
     },
 ];
 
@@ -127,6 +127,22 @@ export default function WebShorties() {
         } else {
             setActiveIdx(idx);
             setIsPlaying(true);
+        }
+    };
+
+    const handleVideoEnded = (idx: number) => {
+        const nextIdx = (idx + 1) % shorts.length;
+        setActiveIdx(nextIdx);
+        setIsPlaying(true);
+        // Scroll next video into center
+        const container = containerRef.current;
+        if (container) {
+            const children = Array.from(container.children) as HTMLElement[];
+            if (children[nextIdx]) {
+                const child = children[nextIdx];
+                const scrollLeft = child.offsetLeft - (container.offsetWidth / 2) + (child.offsetWidth / 2);
+                container.scrollTo({ left: scrollLeft, behavior: "smooth" });
+            }
         }
     };
 
@@ -248,7 +264,7 @@ export default function WebShorties() {
                                 <video
                                     ref={el => { videoRefs.current[i] = el; }}
                                     src={s.videoSrc}
-                                    loop
+                                    onEnded={() => handleVideoEnded(i)}
                                     playsInline
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
