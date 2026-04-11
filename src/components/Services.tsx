@@ -140,7 +140,7 @@ const Services = () => {
                                 <div className="pt-2">
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#ebb207] text-black py-5 rounded-2xl font-black text-lg shadow-xl shadow-[#ebb207]/20 hover:shadow-[#ebb207]/30 transition-all active:scale-[0.98]"
+                                        className="w-full bg-[#ebb207] text-black py-4 md:py-5 rounded-2xl font-black text-base md:text-lg shadow-xl shadow-[#ebb207]/20 hover:shadow-[#ebb207]/30 transition-all active:scale-[0.98]"
                                     >
                                         Get My Breakthrough — 
                                     </button>
