@@ -61,11 +61,11 @@ export const sendEmail = async (options: EmailOptions) => {
     }
   };
 
-  // Send with timeout for faster response
+  // Send with longer timeout for Gmail reliability
   return await Promise.race([
     mailTransporter.sendMail(mailOptions),
     new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Email timeout')), 10000)
+      setTimeout(() => reject(new Error('Email timeout')), 30000)
     )
   ]);
 };
@@ -77,7 +77,7 @@ export const getDefaultFromEmail = (): string => {
 
 // Get default TO email based on provider
 export const getDefaultToEmail = (): string => {
-  return process.env.GMAIL_TO || 'fluencyarc1@gmail.com';
+  return process.env.GMAIL_TO || 'naresh@fluencyarc.com';
 };
 
 // Email templates
