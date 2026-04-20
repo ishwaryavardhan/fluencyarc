@@ -31,8 +31,8 @@ const Header = () => {
             <div className="bg-[#013d45] text-white font-black py-1.5 overflow-hidden">
                 {React.createElement('marquee', { scrollamount: 8, className: "tracking-widest text-xs uppercase flex gap-10" },
                     <>
-                        <span className="mx-8"><span className="text-[#ebb207]">Masterclass date as 10.30 am on 17th May 2026</span> </span>
-                        <span className="mx-8"><span className="text-[#ebb207]">Masterclass date as 10.30 am on 17th May 2026</span> </span>
+                        <span className="mx-8"><span className="text-[#ebb207]">✨ Next Masterclass: 17th May 2026 | 10:30 AM | Limited Seats Available — Book Now! ✨</span> </span>
+                        <span className="mx-8"><span className="text-[#ebb207]">✨ Next Masterclass: 17th May 2026 | 10:30 AM | Limited Seats Available — Book Now! ✨</span> </span>
                     </>
                 )}
             </div>
