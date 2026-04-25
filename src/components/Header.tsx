@@ -66,7 +66,9 @@ const Header = () => {
 
                     <div className="flex items-center gap-2 md:gap-4">
                         <Link
-                            href="#register"
+                            href="https://learn.fluencyarc.com/web/checkout/69ec6b67c5ffb5c357e6ce3d"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-[#ebb207] hover:shadow-xl hover:shadow-[#ebb207]/30 text-black px-3 py-1.5 text-[10px] md:px-7 md:py-3 rounded-full font-bold md:text-[15px] transition-all active:scale-95 shadow-lg shadow-[#ebb207]/20 whitespace-nowrap"
                         >
                             Join Our Masterclass
@@ -106,7 +108,9 @@ const Header = () => {
                                 </Link>
                             ))}
                             <Link
-                                href="#register"
+                                href="https://learn.fluencyarc.com/web/checkout/69ec6b67c5ffb5c357e6ce3d"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="bg-[#ebb207] text-black text-center py-4 rounded-xl font-bold shadow-lg shadow-[#ebb207]/20 flex items-center justify-center gap-2 mt-2"
                             >
