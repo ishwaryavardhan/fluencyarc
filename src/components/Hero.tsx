@@ -86,12 +86,12 @@ const Hero = () => {
                             You Lack Confidence.<br />
                             You understand conversations, but when it's your turn to speak, you hesitate.
                         </p>
-                        
-                    </div>
-                </motion.div>
-<p className="text-base font-semibold text-[#013d45]/70 mt-10 mb-10 text-center">
+                        <p className="text-lg font-semibold text-[#013d45]/70 mt-4 text-center">
                          Click on the button below to Register
                         </p>
+                    </div>
+                </motion.div>
+
              <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
