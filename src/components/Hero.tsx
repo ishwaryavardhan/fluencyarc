@@ -86,15 +86,19 @@ const Hero = () => {
                             You Lack Confidence.<br />
                             You understand conversations, but when it's your turn to speak, you hesitate.
                         </p>
+                        
                     </div>
                 </motion.div>
-
+<p className="text-base font-semibold text-[#013d45]/70 mt-10 mb-10 text-center">
+                         Click on the button below to Register
+                        </p>
              <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                     className="flex justify-center mb-10"
                 >
+                    
                     <a href="#register" className="relative group">
                         <div className="absolute inset-0 bg-[#01a47e] rounded-full blur-xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
                         <div className="relative bg-[#021f1a] text-white px-4 py-3 sm:px-10 sm:py-5 md:px-14 md:py-6 rounded-full font-black text-[13px] sm:text-xl md:text-2xl flex items-center gap-2 sm:gap-3 shadow-2xl border border-white/10 transition-transform active:scale-95 whitespace-nowrap">
