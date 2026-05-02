@@ -58,7 +58,7 @@ const Footer = () => {
                         <nav className="flex flex-col gap-3 font-bold text-[15px] text-gray-600">
                             <Link href="#mentor" className="hover:text-[#ebb207]">Mentor</Link>
                             <Link href="#testimonials" className="hover:text-[#ebb207]">Testimonials</Link>
-                            <Link href="#register" className="hover:text-[#ebb207]">Masterclass</Link>
+                            <Link href="https://learn.fluencyarc.com/web/checkout/69ec6b67c5ffb5c357e6ce3d" target="_blank" rel="noopener noreferrer" className="hover:text-[#ebb207]">Masterclass</Link>
                             <Link href="#faq" className="hover:text-[#ebb207]">FAQ</Link>
                         </nav>
                     </div>
@@ -79,7 +79,7 @@ const Footer = () => {
                                 <span className="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center"><Globe size={16} /></span>
                                 fluencyarc.com
                             </a>
-                            <Link href="#register" className="mt-4 inline-block bg-[#013d45] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#002a30] transition-all shadow-lg shadow-[#013d45]/20 active:scale-95">
+                            <Link href="https://learn.fluencyarc.com/web/checkout/69ec6b67c5ffb5c357e6ce3d" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block bg-[#013d45] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#002a30] transition-all shadow-lg shadow-[#013d45]/20 active:scale-95">
                                 Contact Us
                             </Link>
                         </div>
