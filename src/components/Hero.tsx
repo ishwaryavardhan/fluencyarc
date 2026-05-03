@@ -82,9 +82,11 @@ const Hero = () => {
                 >
                     <Quote className="absolute -top-6 -left-6 md:-left-12 w-12 h-12 md:w-20 md:h-20 text-[#013d45]/10 rotate-180" />
                     <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.08)] border border-gray-50 text-center">
-                        <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed mx-auto max-w-xl">
-                            You Lack Confidence.<br />
-                            You understand conversations, but when it's your turn to speak, you hesitate.
+                        <p className="text-xl md:text-3xl font-bold text-[#013d45] leading-relaxed mx-auto max-w-3xl">
+                            90 Minutes Free English Speaking Masterclass<br />
+                            <span className="text-[#013d45]">Date : 17th May 2026</span> 
+                            <br />
+                            <span className="text-[#013d45]">Time : 10:30 am</span>
                         </p>
                         <p className="text-lg font-semibold text-[#013d45]/70 mt-4 text-center">
                          Click on the button below to Register
